@@ -1,6 +1,6 @@
 (ns teams.client-test
   (:require [clojure.test :refer [deftest is]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [teams.client :as t]))
 
 (defn- fake-io [status body]

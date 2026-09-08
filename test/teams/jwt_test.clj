@@ -1,6 +1,6 @@
 (ns teams.jwt-test
   (:require [clojure.test :refer [deftest is]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [teams.jwt :as jwt]))
 
 (defn- b64url-encode-str [s]

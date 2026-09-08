@@ -7,7 +7,7 @@
   `line-messaging.signature`/`async-signature`) — this one just needs an
   extra pure layer because a JWT (unlike a plain HMAC) carries structured
   claims worth validating on their own."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn- base64url->base64 [s]
   (let [s   (-> s (str/replace "-" "+") (str/replace "_" "/"))
