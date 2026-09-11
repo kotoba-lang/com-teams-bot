@@ -74,11 +74,11 @@ field-verified, until it's run against a real bot.
 ## Testing
 
 ```bash
-clojure -M:test   # jwt.cljc + events.cljc + client.cljc (JVM)
-clojure -M:lint
+kbb -M:test   # jwt.cljc + events.cljc + client.cljc (JVM)
+kbb -M:lint
 ```
 
 `jwt_verify.cljs` has no JVM-runnable test here (Web Crypto isn't
-available under `clojure -M`) and, per the caveat above, no live-network
+available under `kbb -M`) and, per the caveat above, no live-network
 test either — same posture as this workspace's other async-signature
 surfaces, one level more honest about what "tested" means here.
