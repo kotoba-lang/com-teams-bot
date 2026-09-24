@@ -1,10 +1,10 @@
 (ns teams.jwt-test
-  (:require [kotoba.test :refer [deftest is]]
+  (:require [kotoba.bytes :as kbytes] [kotoba.test :refer [deftest is]]
             [kotoba.lang.text :as str]
             [teams.jwt :as jwt]))
 
 (defn- b64url-encode-str [s]
-  (-> (.encodeToString (java.util.Base64/getUrlEncoder) (.getBytes (str s) "UTF-8"))
+  (-> (kbytes/base64url-encode (kbytes/utf8-bytes (str s)))
       (str/replace "=" "")))
 
 (deftest split-jwt-splits-three-parts
